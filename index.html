@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portal de Vagas</title>
+</head>
+<body>
+    <h1>Vagas de Estágio</h1>
+    <ul>
+    {% for vaga in vagas %}
+        <li>
+            <a href="/vaga/{{ vaga.id }}">{{ vaga.titulo }}</a> - {{ vaga.cidade }} - R$ {{ vaga.salario }}
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
